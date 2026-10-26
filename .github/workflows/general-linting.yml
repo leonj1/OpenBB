@@ -22,7 +22,7 @@ concurrency:
 jobs:
   code-linting:
     name: General Code Linting
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, x64]
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4.1.1 # actions/checkout v3.0.2
@@ -73,7 +73,7 @@ jobs:
 
   markdown-link-check:
     name: Markdown Linting
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, x64]
     steps:
       - uses: actions/checkout@v4
         name: Check out the code
@@ -84,7 +84,7 @@ jobs:
 
   json-yaml-validate:
     name: JSON Check
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, x64]
     steps:
       - uses: actions/checkout@v4
 
